@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  line-height: 1.4;
+}
+
+.btn {
+  background: white;
+  border-radius: 55px;
+  padding: 0.7em 5em;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+  line-height: 1.6;
+  min-height: 100vh;
+  text-align: center;
+  background: #674baf url("../images/bg-mobile.svg") no-repeat;
+  background-size: contain;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 0;
+}
+
+header .logo {
+  width: 200px;
+  height: 40px;
+}
+
+main .illustration {
+  margin: 2em 0 3.5em;
+}
+
+main h1 {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+main p {
+  margin: 1.6em 0;
+}
+
+main a.btn {
+  font-size: 14px;
+  -webkit-box-shadow: 0 10px 20px 20px rgba(103, 75, 175, 0.3);
+          box-shadow: 0 10px 20px 20px rgba(103, 75, 175, 0.3);
+}
+
+footer {
+  margin: 5em 0;
+}
+
+footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5em 0;
+}
+
+footer .social-links a {
+  color: white;
+  border: 0.3px solid white;
+  border-radius: 50%;
+  margin: 0 0.5em;
+  height: 30px;
+  width: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: #e882e8;
+}
+/*# sourceMappingURL=style.css.map */

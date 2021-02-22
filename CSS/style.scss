@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// Colors
+// Primary
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+// Font
+$primary-font-family: "Open Sans";
+$secondary-font-family: "Poppins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  line-height: 1.4;
+}
+
+.btn {
+  background: white;
+  border-radius: 55px;
+  padding: 0.7em 5em;
+}
+
+body {
+  font-family: $primary-font-family, sans-serif;
+  //   font-size: $font-size;
+  font-weight: 400;
+  color: white;
+  line-height: 1.6;
+  min-height: 100vh;
+  text-align: center;
+  background: $violet url("../images/bg-mobile.svg") no-repeat;
+  background-size: contain;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 2em 0;
+  }
+
+  .logo {
+    width: 200px;
+    height: 40px;
+  }
+}
+
+main {
+  .illustration {
+    margin: 2em 0 3.5em;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    font-family: $secondary-font-family, sans-serif;
+  }
+
+  p {
+    margin: 1.6em 0;
+  }
+
+  a.btn {
+    font-size: 14px;
+    box-shadow: 0 10px 20px 20px rgba(103, 75, 175, 0.3);
+  }
+}
+
+footer {
+  margin: 5em 0;
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 0;
+
+    a {
+      color: white;
+      border: 0.3px solid white;
+      border-radius: 50%;
+      margin: 0 0.5em;
+      height: 30px;
+      width: 30px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    // color: hsl(228, 45%, 44%);
+    color: $soft-magenta;
+  }
+}
