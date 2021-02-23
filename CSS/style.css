@@ -27,9 +27,10 @@ h1 {
 }
 
 .btn {
+  display: inline-block;
   background: white;
   border-radius: 55px;
-  padding: 0.7em 5em;
+  padding: 0.7em 5.5em;
 }
 
 body {
@@ -64,7 +65,13 @@ header .logo {
 }
 
 main .illustration {
-  margin: 2em 0 3.5em;
+  margin: 1.4em 0 3.5em;
+}
+
+main .illustration img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main h1 {
@@ -73,17 +80,43 @@ main h1 {
 }
 
 main p {
+  font-size: 1rem;
   margin: 1.6em 0;
 }
 
 main a.btn {
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
-  -webkit-box-shadow: 0 10px 20px 20px rgba(103, 75, 175, 0.3);
-          box-shadow: 0 10px 20px 20px rgba(103, 75, 175, 0.3);
+  margin-top: 0.3em;
+  -webkit-box-shadow: 0 2px 2px 1px rgba(77, 56, 129, 0.8);
+          box-shadow: 0 2px 2px 1px rgba(77, 56, 129, 0.8);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main a.btn:hover {
+  background: #e882e8;
+  color: white;
 }
 
 footer {
-  margin: 5em 0;
+  margin: 4em 0;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .social-links {
@@ -97,6 +130,9 @@ footer .social-links {
       -ms-flex-align: center;
           align-items: center;
   margin: 1.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .social-links a {
@@ -106,9 +142,9 @@ footer .social-links a {
   margin: 0 0.5em;
   height: 30px;
   width: 30px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -116,6 +152,13 @@ footer .social-links a {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.8rem;
+  -webkit-transition: all 0.5 ease-in-out;
+  transition: all 0.5 ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: #e882e8;
+  border-color: #e882e8;
 }
 
 footer .attribution {
@@ -125,5 +168,120 @@ footer .attribution {
 
 footer .attribution a {
   color: #e882e8;
+}
+
+@media (min-width: 515px) {
+  main h1 {
+    font-size: 2.1rem;
+  }
+  main p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 635px) {
+  main .illustration {
+    margin: 1.4em 0 3.5em;
+  }
+  main .illustration img {
+    max-width: 100%;
+    height: 365px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media (min-width: 835px) {
+  .btn {
+    padding: 1.1em 5.5em;
+  }
+  main .illustration {
+    margin: 1.4em 0 3.5em;
+  }
+  main .illustration img {
+    width: 100%;
+    height: 365px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main p {
+    padding: 0 5em;
+  }
+  main a.btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 950px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+    background: #674baf url("../images/bg-desktop.svg") no-repeat;
+    background-size: 90% 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 18vh auto 13vh;
+        grid-template-rows: 18vh auto 13vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .logo {
+    width: unset;
+    height: unset;
+  }
+  main {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% 44%;
+        grid-template-columns: 55% 44%;
+    gap: 3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  main .illustration {
+    margin: 0;
+  }
+  main .illustration img {
+    height: unset;
+  }
+  main p {
+    padding: 0;
+  }
+  footer .container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 90%;
+    max-width: 1400px;
+  }
+  main .container {
+    gap: 4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
