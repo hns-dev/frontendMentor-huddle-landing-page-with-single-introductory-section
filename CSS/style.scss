@@ -174,7 +174,7 @@ footer {
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -196,7 +196,7 @@ footer {
 
 @media (min-width: 835px) {
   .btn {
-    padding: 1.1em 5.5em;
+    padding: 0.8em 5.5em;
   }
 
   main {
@@ -222,16 +222,17 @@ footer {
 }
 
 @media (min-width: 950px) {
-  // .container {
-  //   width: 90%;
-  //   max-width: 1400px;
-  // }
+  .container {
+    width: 85%;
+    max-width: 1400px;
+  }
 
   body {
     height: 100vh;
     overflow: hidden;
     background: $violet url("../images/bg-desktop.svg") no-repeat;
-    background-size: 90% 100%;
+    // background-size: 90% 100%;
+    background-size: cover;
     display: grid;
     grid-template-rows: 18vh auto 13vh;
     justify-content: center;
@@ -256,7 +257,7 @@ footer {
       grid-template-columns: 55% 44%;
       gap: 3rem;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
       text-align: left;
     }
 
@@ -265,6 +266,14 @@ footer {
       img {
         height: unset;
       }
+    }
+
+    .introductory-text {
+      padding-top: 2.5em;
+    }
+
+    h1 {
+      font-size: 2rem;
     }
 
     p {
@@ -280,6 +289,10 @@ footer {
 }
 
 @media (min-width: 1200px) {
+  body {
+    background-size: 90% 100%;
+  }
+
   .container {
     width: 90%;
     max-width: 1400px;
@@ -288,6 +301,10 @@ footer {
   main {
     .container {
       gap: 4rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
     }
   }
 }

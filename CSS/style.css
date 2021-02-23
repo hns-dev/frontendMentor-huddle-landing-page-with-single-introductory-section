@@ -175,7 +175,7 @@ footer .attribution a {
     font-size: 2.1rem;
   }
   main p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -193,7 +193,7 @@ footer .attribution a {
 
 @media (min-width: 835px) {
   .btn {
-    padding: 1.1em 5.5em;
+    padding: 0.8em 5.5em;
   }
   main .illustration {
     margin: 1.4em 0 3.5em;
@@ -213,11 +213,15 @@ footer .attribution a {
 }
 
 @media (min-width: 950px) {
+  .container {
+    width: 85%;
+    max-width: 1400px;
+  }
   body {
     height: 100vh;
     overflow: hidden;
     background: #674baf url("../images/bg-desktop.svg") no-repeat;
-    background-size: 90% 100%;
+    background-size: cover;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 18vh auto 13vh;
@@ -254,9 +258,6 @@ footer .attribution a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     text-align: left;
   }
   main .illustration {
@@ -264,6 +265,12 @@ footer .attribution a {
   }
   main .illustration img {
     height: unset;
+  }
+  main .introductory-text {
+    padding-top: 2.5em;
+  }
+  main h1 {
+    font-size: 2rem;
   }
   main p {
     padding: 0;
@@ -276,12 +283,18 @@ footer .attribution a {
 }
 
 @media (min-width: 1200px) {
+  body {
+    background-size: 90% 100%;
+  }
   .container {
     width: 90%;
     max-width: 1400px;
   }
   main .container {
     gap: 4rem;
+  }
+  main h1 {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
