@@ -2,13 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 // Colors
-// Primary
 $violet: hsl(257, 40%, 49%);
 $soft-magenta: hsl(300, 69%, 71%);
 
 // Font
-$primary-font-family: "Open Sans";
-$secondary-font-family: "Poppins";
+$primary-font-stack: "Open Sans";
+$secondary-font-stack: "Poppins";
 
 *,
 *::before,
@@ -43,16 +42,25 @@ h1 {
 }
 
 body {
-  font-family: $primary-font-family, sans-serif;
-  //   font-size: $font-size;
+  font-family: $primary-font-stack, sans-serif;
   font-weight: 400;
   color: white;
-  line-height: 1.6;
-  min-height: 100vh;
   text-align: center;
+  line-height: 1.6;
+  width: 100vw;
+  min-height: 100vh;
   background: $violet url("../images/bg-mobile.svg") no-repeat;
   background-size: contain;
 }
+
+// .bg {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   background: $violet url("../images/bg-mobile.svg") no-repeat;
+//   background-size: contain;
+//   z-index: -1;
+// }
 
 .container {
   width: 80%;
@@ -73,21 +81,18 @@ header {
 }
 
 main {
-  // max-width: 600px;
   .illustration {
     margin: 1.4em 0 3.5em;
-    // max-height: 385px;
 
     img {
-      width: 100%;
-      // height: 385px;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
   h1 {
     font-size: 1.6rem;
-    font-family: $secondary-font-family, sans-serif;
+    font-family: $secondary-font-stack, sans-serif;
+    font-weight: 600;
   }
 
   p {
@@ -96,8 +101,8 @@ main {
   }
 
   a.btn {
-    font-family: $secondary-font-family, sans-serif;
-    font-size: 14px;
+    font-family: $secondary-font-stack, sans-serif;
+    font-size: 0.9rem;
     color: $violet;
     margin-top: 0.3em;
     box-shadow: 0 2px 2px 1px rgba(77, 56, 129, 0.8);
@@ -125,9 +130,6 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 1.5em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     a {
       color: white;
@@ -150,47 +152,35 @@ footer {
   }
 
   .attribution {
-    font-size: 11px;
+    font-size: 0.7rem;
     text-align: center;
     a {
-      // color: hsl(228, 45%, 44%);
       color: $soft-magenta;
     }
   }
 }
 
 // Media queries
-// @media (min-width: 434px) {
-//   main {
-//     h1 {
-//       font-size: 1.9rem;
-//     }
-//   }
-// }
-
-@media (min-width: 515px) {
-  main {
-    h1 {
-      font-size: 2.1rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
-  }
-}
 
 @media (min-width: 635px) {
   main {
     .illustration {
-      margin: 1.4em 0 3.5em;
       // max-height: 385px;
 
       img {
         max-width: 100%;
         height: 365px;
         object-fit: contain;
+        margin: 0 auto;
       }
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
     }
   }
 }
@@ -201,17 +191,6 @@ footer {
   }
 
   main {
-    .illustration {
-      margin: 1.4em 0 3.5em;
-      // max-height: 385px;
-
-      img {
-        width: 100%;
-        height: 365px;
-        object-fit: contain;
-      }
-    }
-
     p {
       padding: 0 5em;
     }
@@ -222,7 +201,14 @@ footer {
   }
 }
 
-@media (min-width: 950px) {
+// @media (min-width: 929px) {
+//   .bg {
+//     background: $violet url("../images/bg-desktop.svg") no-repeat;
+//     background-size: 90% 100%;
+//   }
+// }
+
+@media (min-width: 1100px) {
   .container {
     width: 85%;
     max-width: 1400px;
@@ -255,21 +241,24 @@ footer {
 
     .container {
       display: grid;
-      grid-template-columns: 55% 44%;
-      gap: 3rem;
+      grid-template-columns: 53% 42%;
+      gap: 2rem;
       justify-content: center;
       // align-items: center;
       text-align: left;
     }
 
     .illustration {
+      height: 100%;
       margin: 0;
       img {
-        height: unset;
+        max-width: 100%;
+        height: initial;
       }
     }
 
     .introductory-text {
+      height: 100%;
       padding-top: 2.5em;
     }
 
@@ -295,17 +284,17 @@ footer {
   }
 
   .container {
-    width: 90%;
+    // width: 90%;
     max-width: 1400px;
   }
 
   main {
     .container {
-      gap: 4rem;
+      gap: 3rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
   }
 }
